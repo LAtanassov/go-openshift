@@ -1,0 +1,35 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: BuildConfig
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: null
+    labels:
+      app: go-openshift
+    name: go-openshift
+  spec:
+    nodeSelector: null
+    output: {}
+    postCommit: {}
+    resources: {}
+    source:
+      git:
+        uri: https://github.com/LAtanassov/go-openshift.git
+      type: Git
+    strategy:
+      jenkinsPipelineStrategy: {}
+      type: JenkinsPipeline
+    triggers:
+    - github:
+        secret: 48Fd31f5cyDpymSOhx7i
+      type: GitHub
+    - generic:
+        secret: HSmwXzpBF-0lpsV3ADIm
+      type: Generic
+    - type: ConfigChange
+  status:
+    lastVersion: 0
+kind: List
+metadata: {}

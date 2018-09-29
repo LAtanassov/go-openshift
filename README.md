@@ -1,6 +1,20 @@
 # go-openshift
 practice CI and CD deployment using OpenShift
 
+# Minishift init
+
+```sh
+> minishift start
+> eval $(minishift oc-env)
+> source <(oc completion bash)
+```
+
+# BuildConfig
+
+```sh
+> oc new-app https://github.com/LAtanassov/go-openshift.git --strategy=pipeline -o yaml > BuildConfig.yml
+```
+
 # Overview
 
 Layer 0: OpenShift images  
