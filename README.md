@@ -1,12 +1,12 @@
 # go-openshift
-GOAL: of this repository is to evaluate - how to deploy CI and CD pipeline for golang on using OpenShift
+Goal of this repository is to evaluate - how to deploy CI and CD pipeline for golang on using OpenShift
 
 # Finding
 
 * CI - from source to docker image is difficult
   * no dedicated jenkins slave with golang build env. available - need to be created
-  * build within a docker container difficult to setup
-
+  * build within a docker container difficult to setup - docker-in-docker issue
+* CD skipped as Openshift 4.x will move to helm charts deployment
 
 # Minishift init
 
